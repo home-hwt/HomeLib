@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/h_video_tilte_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.guo.androidlib.view.VideoTextureView
+        android:id="@+id/h_video_textureview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/h_video_tilte_tv" />
+
+    <ImageView
+        android:id="@+id/h_play_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/h_video_tilte_tv"
+        android:layout_alignTop="@+id/h_video_textureview"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/icn_play_small" />
+
+    <com.guo.androidlib.view.HomeCircleProgress
+        android:id="@+id/h_download_view"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignLeft="@+id/h_video_tilte_tv"
+        android:layout_alignTop="@+id/h_video_textureview"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="40dp" />
+
+</RelativeLayout>

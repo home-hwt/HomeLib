@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <com.guo.androidlib.view.HomeListView
+        android:id="@+id/listView1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_http_request_bt"
+       >
+    </com.guo.androidlib.view.HomeListView>
+
+    <com.guo.androidlib.view.VideoTextureView
+        android:id="@+id/textureView1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#FE4323"
+         />
+
+    <com.guo.androidlib.view.ArrowDownloadButton
+        android:id="@+id/h_down_progress_v"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textureView1" />
+
+    <com.guo.androidlib.view.HomeCircleProgress
+        android:id="@+id/h_download_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignRight="@+id/h_down_progress_v"
+        android:layout_below="@+id/h_down_progress_v"
+        android:layout_marginRight="16dp"
+        android:background="#FE4323" />
+
+    <Button
+        android:id="@+id/id_http_request_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textureView1"
+        android:onClick="mainLayoutViewClick"
+        android:text="http_request" />
+
+    <Button
+        android:id="@+id/id_op_db_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/id_http_request_bt"
+        android:layout_alignBottom="@+id/id_http_request_bt"
+        android:layout_toRightOf="@+id/id_http_request_bt"
+        android:onClick="mainLayoutViewClick"
+        android:text="数据库" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_download_view"
+        android:layout_toRightOf="@+id/id_op_db_bt"
+        android:onClick="opThreadPool"
+        android:text="线程池" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/id_http_request_bt"
+        android:layout_below="@+id/id_http_request_bt"
+        android:layout_marginTop="40dp"
+        
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:src="@drawable/icn_play_small" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="intent2Bitmap"
+        android:layout_alignBottom="@+id/textureView1"
+        android:layout_toLeftOf="@+id/h_download_view"
+        android:text="图片" />
+
+</RelativeLayout>
